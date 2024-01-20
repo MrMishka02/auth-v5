@@ -1,9 +1,10 @@
-import React from 'react'
+import { auth } from "@/auth";
+import { currentUser } from "@/lib/auth";
 
-const ServerPage = () => {
-  return (
-    <div>Server Page</div>
-  )
-}
+const ServerPage = async () => {
+  const user = await currentUser();
 
-export default ServerPage
+  return <div>{JSON.stringify(user)}</div>;
+};
+
+export default ServerPage;
