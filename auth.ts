@@ -65,6 +65,8 @@ export const {
 
       const existingUser = await getUserById(token.sub)
       if (!existingUser) return token
+
+      token.name = existingUser.name
       token.role = existingUser.role
       token.isTwoFactorEnabled = existingUser.isTwoFactorEnabled
 
