@@ -13,7 +13,7 @@ const SettingsPage = () => {
   const onClick = () => {
     startTransition(() => {
       settings({
-        name: "New name!",
+        name: "Mikheil Gogia",
       }).then(() => {
         update();
       });
