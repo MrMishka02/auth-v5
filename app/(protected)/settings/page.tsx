@@ -18,6 +18,8 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { useCurrentUser } from "@/hooks/use-current-user";
+import FormError from "@/components/form-error";
+import FormSuccess from "@/components/form-success";
 
 const SettingsPage = () => {
   const user = useCurrentUser();
@@ -74,6 +76,8 @@ const SettingsPage = () => {
                 )}
               />
             </div>
+            <FormError message={error} />
+            <FormSuccess message={success} />
             <Button type="submit">Save</Button>
           </form>
         </Form>
