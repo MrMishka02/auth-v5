@@ -2,6 +2,7 @@ import { Poppins } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import LoginButton from "@/components/auth/login-button";
+import { ModeToggle } from "@/components/mode-toggle";
 
 const font = Poppins({
   subsets: ["latin"],
@@ -14,6 +15,7 @@ export default function Home() {
       className="h-full flex flex-col items-center justify-center
      bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-sky-400 to-blue-800"
     >
+      <ModeToggle />
       <div className="space-y-6 text-center">
         <h1
           className={cn(
